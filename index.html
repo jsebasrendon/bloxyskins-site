@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BloxySkins | Skins para Roblox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #0f172a, #020617);
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            color: #22c55e;
+        }
+
+        header button {
+            background: #22c55e;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 14px 30px;
+            font-size: 1rem;
+            background: #22c55e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .skins {
+            padding: 80px 60px;
+        }
+
+        .skins h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .skins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skin-card {
+            background: #020617;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(34,197,94,0.15);
+        }
+
+        .skin-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skin-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #22c55e;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .skin-card button {
+            background: #22c55e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            opacity: 0.8;
+        }
+
+        footer span {
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BloxySkins</h1>
+    <button onclick="login()">Iniciar sesión</button>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Las mejores skins para Roblox</h2>
+        <p>Personaliza tu avatar con skins exclusivas, épicas y legendarias.
+           Compra rápido, fácil y seguro en BloxySkins.</p>
+        <button onclick="scrollSkins()">Ver Skins</button>
+    </div>
+</section>
+
+<section class="skins" id="skins">
+    <h3>Skins destacadas</h3>
+
+    <div class="skins-grid">
+        <div class="skin-card">
+            <img src="https://via.placeholder.com/300x200?text=Skin+Legendaria" alt="Skin">
+            <h4>Skin Legendaria</h4>
+            <div class="price">500 Robux</div>
+            <button onclick="buySkin('Skin Legendaria')">Comprar</button>
+        </div>
+
+        <div class="skin-card">
+            <img src="https://via.placeholder.com/300x200?text=Skin+Épica" alt="Skin">
+            <h4>Skin Épica</h4>
+            <div class="price">300 Robux</div>
+            <button onclick="buySkin('Skin Épica')">Comprar</button>
+        </div>
+
+        <div class="skin-card">
+            <img src="https://via.placeholder.com/300x200?text=Skin+Rara" alt="Skin">
+            <h4>Skin Rara</h4>
+            <div class="price">150 Robux</div>
+            <button onclick="buySkin('Skin Rara')">Comprar</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 <span>BloxySkins</span> | Maqueta académica – No afiliado a Roblox
+</footer>
+
+<script>
+    function buySkin(skin) {
+        alert("Has seleccionado: " + skin + "\n\n⚠️ Esta es una maqueta, no se realiza compra real.");
+    }
+
+    function login() {
+        alert("Inicio de sesión simulado.");
+    }
+
+    function scrollSkins() {
+        document.getElementById("skins").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+</body>
+</html>
