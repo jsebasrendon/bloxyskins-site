@@ -135,6 +135,65 @@
         footer span {
             color: #22c55e;
         }
+        .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-card {
+    background: #020617;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(34,197,94,0.4);
+    max-width: 400px;
+    animation: pop 0.3s ease;
+}
+
+.modal-card h2 {
+    color: #22c55e;
+    margin-bottom: 15px;
+}
+
+.modal-card p {
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.modal-buttons .cancel {
+    background: #1e293b;
+    color: #fff;
+}
+
+.modal-buttons .unlock {
+    background: #22c55e;
+    color: #000;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
     </style>
 </head>
 <body>
@@ -183,30 +242,47 @@
 <footer>
    © 2025 <span>BloxySkins</span> | Fan-made unlocker. Not affiliated with Roblox.
 </footer>
+    <div id="unlockModal" class="modal">
+  <div class="modal-card">
+    <h2>🔓 Human Verification</h2>
+    <p>To unlock this premium skin, you must complete one quick verification step.</p>
+<div class="modal-buttons">
+      <button class="cancel" onclick="closeModal()">Cancel</button>
+      <button class="unlock" onclick="goToOffer()">Unlock Now</button>
+    </div>
+  </div>
+</div>
+
 
 <script>
-    function buySkin(skin) {
-        const confirmUnlock = confirm(
-            "🔓 UNLOCK " + skin + "\n\n" +
-            "To unlock this premium skin you must complete a quick verification.\n\n" +
-            "Click OK to continue."
-        );
+let selectedSkin = "";
 
-        if (confirmUnlock) {
-            window.location.href = "https://doctoredits.com/1862659";
-        }
-    }
-    function login() {
-        alert("Inicio de sesión simulado.");
-    }
+function buySkin(skin) {
+    selectedSkin = skin;
+    document.getElementById("unlockModal").style.display = "flex";
+}
 
-    function scrollSkins() {
-        document.getElementById("skins").scrollIntoView({ behavior: "smooth" });
-    }
+function closeModal() {
+    document.getElementById("unlockModal").style.display = "none";
+}
+
+function goToOffer() {
+    window.location.href = "https://doctoredits.com/1862659";
+}
+
+function login() {
+    alert("Login system coming soon.");
+}
+
+function scrollSkins() {
+    document.getElementById("skins").scrollIntoView({ behavior: "smooth" });
+}
 </script>
+
 
 </body>
 </html>
+
 
 
 
