@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BloxySkins | Skins para Roblox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="75b7a43208a8a9bd364edca45db556a8">
+    <script src="https://quge5.com/88/tag.min.js" data-zone="195872" async data-cfasync="false"></script>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #0f172a, #020617);
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            color: #22c55e;
+        }
+
+        header button {
+            background: #22c55e;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 14px 30px;
+            font-size: 1rem;
+            background: #22c55e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .skins {
+            padding: 80px 60px;
+        }
+
+        .skins h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .skins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skin-card {
+            background: #020617;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(34,197,94,0.15);
+        }
+
+        .skin-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skin-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #22c55e;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .skin-card button {
+            background: #22c55e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            opacity: 0.8;
+        }
+
+        footer span {
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BloxySkins</h1>
+    <button onclick="login()">Iniciar sesión</button>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Las mejores skins para Roblox</h2>
+        <p>Personaliza tu avatar con skins exclusivas, épicas y legendarias.
+           Desbloquea rápido, fácil y seguro en BloxySkins.</p>
+        <button onclick="scrollSkins()">Ver Skins</button>
+    </div>
+</section>
+
+<section class="skins" id="skins">
+    <h3>Skins destacadas</h3>
+
+    <div class="skins-grid">
+        <div class="skin-card">
+            <img src="images/1.jpg" alt="Skin">
+            <h4>Gorra W Merch</h4>
+            <div class="price">Legendary Skin</div>
+            <button onclick="buySkin('Legendary Skin')">Unlock</button>
+        </div>
+
+        <div class="skin-card">
+            <img src="images/2.png" alt="Skin">
+            <h4>Skin Épica</h4>
+            <div class="price">Legendary Skin</div>
+            <button onclick="buySkin('Legendary Skin')">Unlock</button>
+        </div>
+
+        <div class="skin-card">
+            <img src="images/3.png" alt="Skin">
+            <h4>Skin Rara</h4>
+            <div class="price">Legendary Skin</div>
+            <button onclick="buySkin('Legendary Skin')">Unlock</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+   © 2025 <span>BloxySkins</span> | Fan-made unlocker. Not affiliated with Roblox.
+</footer>
+
+<script>
+    function buySkin(skin) {
+        const confirmUnlock = confirm(
+            "🔓 UNLOCK " + skin + "\n\n" +
+            "To unlock this premium skin you must complete a quick verification.\n\n" +
+            "Click OK to continue."
+        );
+
+        if (confirmUnlock) {
+            window.location.href = "https://doctoredits.com/1862659";
+        }
+    }
+    function login() {
+        alert("Inicio de sesión simulado.");
+    }
+
+    function scrollSkins() {
+        document.getElementById("skins").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+</body>
+</html>
+
+
